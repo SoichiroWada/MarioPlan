@@ -48,13 +48,13 @@ class EditProject extends Component {
       return (
       <div className="container">
           <form className="white" onSubmit={this.handleSubmit}>
-            <h5 id="eph5" className="pink-text text-lighten-2">Edit Project</h5>
-            <div className="input-field col s12 active">
+            <h5 className="pink-text text-lighten-2 eh5">Edit Project</h5>
+            <div className="input-field col s12 active title">
                 <input id="title" type="text" onChange={this.handleChange} 
                 value={this.state.title} />
                 <label className="active" htmlFor="title">Project Title</label>
             </div>
-            <div className="input-field col s12 active">
+            <div className="input-field col s12 active pcon">
                 <TextareaAutosize id="content" className="materialize-textarea" onChange={this.handleChange}
                 value={this.state.content} ></TextareaAutosize>
                 <label className="active" htmlFor="content">Project Content</label>

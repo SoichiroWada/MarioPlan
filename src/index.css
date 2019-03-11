@@ -72,7 +72,14 @@ background-color:pink;
   margin-top:1.0em;
   white-space: pre-wrap;
 }
-#eph5{
+/* #eph5{
   margin-top:0.3em;
   margin-bottom:1.0em;
+} */
+h5.eh5{
+  margin-top:0.3em;
+  margin-bottom:1.0em;
+}
+.input-field.title{
+  margin-right:1.0em;
 }
