@@ -5,9 +5,7 @@ const initState = {
   }
 
 const contentReducer = (state = initState, action) => {
-    // console.log('action in contentReducer:', action.title)
-    // console.log('state.todos in reducer:', state)
-    // console.log('state in reducer:', state)
+
     if (action.type === 'FETCH_DATA'){
         return {
             ...state,

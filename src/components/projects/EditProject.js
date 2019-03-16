@@ -71,10 +71,6 @@ class EditProject extends Component {
 
 const mapStateToProps = (state, ownProps) => {
 
-    // console.log("state in EditProject:",state);
-    // console.log("ownProps:",ownProps);
-    // console.log('project in mapStateToProps:',project)
-
     return {
       id:state.content.id,
       title:state.content.title,

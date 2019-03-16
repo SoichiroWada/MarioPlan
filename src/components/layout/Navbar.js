@@ -7,7 +7,6 @@ import { connect } from 'react-redux'
 const Navbar = (props) => {
   // console.log('props in Navbar:',props);
   const { auth, profile } = props;
-  // console.log(auth);
   const links = auth.uid ? <SignedInLinks profile={profile} /> : <SignedOutLinks />;
 
   return (

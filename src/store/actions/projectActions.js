@@ -1,40 +1,40 @@
-export const getProject = () => {
-  return (dispatch, getState, {getFirestore}) => {
-    const firestore = getFirestore();
-    const profile = getState().firebase.profile;
-    const authorId = getState().firebase.auth.uid;
-    const projects = [];
-    const notifications = [];
+// export const getProject = () => {
+//   return (dispatch, getState, {getFirestore}) => {
+//     const firestore = getFirestore();
+//     const profile = getState().firebase.profile;
+//     const authorId = getState().firebase.auth.uid;
+//     const projects = [];
+//     const notifications = [];
 
-    // var citiesRef = db.collection("cities");
-    firestore.collection("projects").get()
-    .then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-      // console.log(`${doc.id} => ${doc.data()}`);
-          projects.push(doc.data());
-      });
-    })
-    .then(() => {
-      dispatch({ type: 'GET_PROJECT_SUCCESS', projects:projects });
-    })
-    .catch(err => {
-      dispatch({ type: 'GET_PROJECT_ERROR' }, err);
-    });
+//     // var citiesRef = db.collection("cities");
+//     firestore.collection("projects").get()
+//     .then((querySnapshot) => {
+//       querySnapshot.forEach((doc) => {
+//       // console.log(`${doc.id} => ${doc.data()}`);
+//           projects.push(doc.data());
+//       });
+//     })
+//     .then(() => {
+//       dispatch({ type: 'GET_PROJECT_SUCCESS', projects:projects });
+//     })
+//     .catch(err => {
+//       dispatch({ type: 'GET_PROJECT_ERROR' }, err);
+//     });
 
-    firestore.collection("notifications").get()
-    .then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-          notifications.push(doc.data());
-      });
-    })
-    .then(() => {
-      dispatch({ type: 'GET_NOTI_SUCCESS', notifications:notifications });
-    })
-    .catch(err => {
-      dispatch({ type: 'GET_NOTI_ERROR' }, err);
-    });
-  }
-};
+//     firestore.collection("notifications").get()
+//     .then((querySnapshot) => {
+//       querySnapshot.forEach((doc) => {
+//           notifications.push(doc.data());
+//       });
+//     })
+//     .then(() => {
+//       dispatch({ type: 'GET_NOTI_SUCCESS', notifications:notifications });
+//     })
+//     .catch(err => {
+//       dispatch({ type: 'GET_NOTI_ERROR' }, err);
+//     });
+//   }
+// };
 
 export const createProject = (project) => {
     return (dispatch, getState, {getFirestore}) => {
