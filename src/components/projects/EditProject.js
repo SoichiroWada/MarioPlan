@@ -39,7 +39,7 @@ class EditProject extends Component {
     const id = this.props.match.params.id;
     this.props.cancel(this.state);
     this.props.history.push('/project/'+id);
-}
+  }
 
   render() {
       const { auth } = this.props;  
@@ -48,7 +48,7 @@ class EditProject extends Component {
       return (
       <div className="container">
           <form className="white" onSubmit={this.handleSubmit}>
-            <h5 id="eph5" className="pink-text text-lighten-2">Edit Project</h5>
+            <h5 className="pink-text text-lighten-2 eph5">Edit Project</h5>
             <div className="input-field col s12 active">
                 <input id="title" type="text" onChange={this.handleChange} 
                 value={this.state.title} />
@@ -61,7 +61,7 @@ class EditProject extends Component {
             </div>
             <div className="buttons">
                 <button className="btn pink lighten-2">Update</button>
-                <button className="waves-effect waves-light btn" onClick={this.handleCancel} id="cancel">Cancel</button>
+                <button className="waves-effect waves-light btn blue cancel" onClick={this.handleCancel}>Cancel</button>
             </div>
           </form>
       </div>

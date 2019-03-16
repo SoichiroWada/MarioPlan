@@ -11,6 +11,7 @@ body {
   background-position: bottom;
   background-color: #95e8f3;
   min-height: 100%;
+  font-size:1.0em;
 }
 
 form{
@@ -37,42 +38,51 @@ input[type=password]:not(.browser-default):focus:not([readonly]) + label{
   color: #ec407a !important;
 }
 
-#pid{
-  vertical-align: center;
-  margin-top: 0px;
-  cursor: pointer;
+.row .second{
+  float:right;
+}
+
+.card-lead{
+  color:#494949;
+}
+.ps-block1{
+  margin-bottom:10px;
+}
+
+.card-content{
+  font-size:1.0em;
 }
 
 .buttons{
   text-align:center;
 }
 
-#btnDel {
+button.delete {
 background-color:#ff60bc;
 margin-left:1.0em;
 }
 
-#btnDel:hover {
+button.delete:hover {
 background-color:pink;
 }
 
-#title, #content{
+.titleInput, .contentInput{
   padding-left:1.0em;
 }
-#cancel{
+button.btn {
   margin-left:1.0em;
 }
 
-#text-area{
+/* #text-area{
   border-color:red;
   border-width:0px;
-}
+} */
 
-#pjc{
+.pjc{
   margin-top:1.0em;
   white-space: pre-wrap;
 }
-#eph5{
+.eph5{
   margin-top:0.3em;
   margin-bottom:1.0em;
 }

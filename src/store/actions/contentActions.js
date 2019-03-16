@@ -1,5 +1,4 @@
 export const fetchProject = (data) => {
-    console.log('2001:',data.id);
     return {
       type: 'FETCH_DATA',
       id:data.id,
