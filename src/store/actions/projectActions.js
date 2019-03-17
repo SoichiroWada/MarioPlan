@@ -4,8 +4,16 @@ export const createProject = (project) => {
       const profile = getState().firebase.profile;
       const authorId = getState().firebase.auth.uid;
 
-      firestore.collection('projects').add({
+      const timeN = Date.now().toString(32);
+      const numberR = Math.random().toString(10);
+      const numberT = numberR.slice(2, numberR.length);
+      const numberU = Number(numberT).toString(32);
+      const id = timeN + numberU;
+      console.log('VVV id:',id);
+
+      firestore.collection('projects').doc(id).set({
         ...project,
+        aid: id,
         authorFirstName: profile.firstName,
         authorLastName: profile.lastName,
         authorId: authorId,
@@ -23,10 +31,7 @@ export const updateProject = (project) => {
     const firestore = getFirestore();
     // const profile = getState().firebase.profile;
     // const authorId = getState().firebase.auth.uid;
-    // console.log('project:', project);
-    // console.log('1001:',firestore);
-    // console.log('1002:',profile);
-    // console.log('1003:',authorId);
+
     firestore.collection('projects').doc(project.id).update({
       title:project.title,
       content:project.content

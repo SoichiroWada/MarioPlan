@@ -30,11 +30,11 @@ class CreateProject extends Component {
         <form className="white" onSubmit={this.handleSubmit}>
           <h5 className="grey-text text-darken-3">Create a New Project</h5>
           <div className="input-field">
-            <input type="text" className='titleInput' onChange={this.handleChange} />
+            <input id="title" type="text" className='titleText' onChange={this.handleChange} />
             <label htmlFor="title">Project Title</label>
           </div>
           <div className="input-field">
-            <textarea className="materialize-textarea contentInput" onChange={this.handleChange}></textarea>
+            <textarea id="content" className="materialize-textarea contentText" onChange={this.handleChange}></textarea>
             <label htmlFor="content">Project Content</label>
           </div>
           <div className="input-field">

@@ -8,7 +8,6 @@ export const fetchProject = (data) => {
 };
 
 export const edit = (data) => {
-
     return {
         type: 'EDIT_DATA',
         title: data.title,
