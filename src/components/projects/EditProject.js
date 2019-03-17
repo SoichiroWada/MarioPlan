@@ -46,22 +46,22 @@ class EditProject extends Component {
       console.log('this.props in render:',this.props)
       if (!auth.uid) return <Redirect to='/signin' /> 
       return (
-      <div className="container">
+      <div className="container editProject">
           <form className="white" onSubmit={this.handleSubmit}>
             <h5 className="pink-text text-lighten-2 eh5">Edit Project</h5>
             <div className="input-field col s12 active title">
-                <input id="title" type="text" onChange={this.handleChange} 
+                <input id="title" type="text" className="titleText" onChange={this.handleChange} 
                 value={this.state.title} />
                 <label className="active" htmlFor="title">Project Title</label>
             </div>
             <div className="input-field col s12 active pcon">
-                <TextareaAutosize id="content" className="materialize-textarea" onChange={this.handleChange}
+                <TextareaAutosize id="content" className="materialize-textarea contentText" onChange={this.handleChange} 
                 value={this.state.content} ></TextareaAutosize>
                 <label className="active" htmlFor="content">Project Content</label>
             </div>
             <div className="buttons">
                 <button className="btn pink lighten-2">Update</button>
-                <button className="waves-effect waves-light btn" onClick={this.handleCancel} id="cancel">Cancel</button>
+                <button className="waves-effect waves-light btn cancel" onClick={this.handleCancel}>Cancel</button>
             </div>
           </form>
       </div>

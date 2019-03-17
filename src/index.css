@@ -37,49 +37,37 @@ input[type=password]:not(.browser-default):focus:not([readonly]) + label{
   color: #ec407a !important;
 }
 
-#pid{
-  vertical-align: center;
-  margin-top: 0px;
-  cursor: pointer;
+.editProject{
+  margin-top:-20px;
 }
 
 .buttons{
   text-align:center;
 }
 
-#btnDel {
+.buttons .delete {
 background-color:#ff60bc;
 margin-left:1.0em;
 }
 
-#btnDel:hover {
+.buttons .delete:hover {
 background-color:pink;
 }
 
-#title, #content{
+.titleText, .contentText{
   padding-left:1.0em;
 }
-#cancel{
+
+.cancel{
   margin-left:1.0em;
 }
 
-#text-area{
-  border-color:red;
-  border-width:0px;
-}
-
-#pjc{
+.pjc{
   margin-top:1.0em;
   white-space: pre-wrap;
 }
-/* #eph5{
+
+.eph5{
   margin-top:0.3em;
   margin-bottom:1.0em;
-} */
-h5.eh5{
-  margin-top:0.3em;
-  margin-bottom:1.0em;
-}
-.input-field.title{
-  margin-right:1.0em;
 }

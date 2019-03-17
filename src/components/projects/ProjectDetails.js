@@ -17,6 +17,12 @@ const ProjectDetails = (props) => {
     props.history.push('/');
   }
 
+  const handleCancel = (e) => {
+    e.preventDefault();
+    // console.log(this.state);
+    props.history.push('/');
+  }
+
   const handleFetch = () => {
     // console.log('props in ProjectDetails:', props);
     const fobj = {
@@ -36,7 +42,7 @@ const ProjectDetails = (props) => {
           <div className="card-content">
             <span className="card-title">{project.title}</span>
             <hr></hr>
-            <p id="pjc">{project.content}</p>
+            <p className="pjc">{project.content}</p>
           </div>
           <div className="card-action grey lighten-4 grey-text">
             <div>Posted by {project.authorFirstName} {project.authorLastName}</div>
@@ -45,7 +51,8 @@ const ProjectDetails = (props) => {
         </div>
         <div className='buttons'>
           <button className="waves-effect waves-light btn" onClick={handleFetch}>Edit</button>
-          <button id="btnDel" className="waves-effect waves-light btn" onClick={handleDelete}>Delete</button>
+          <button className="waves-effect waves-light btn delete" onClick={handleDelete}>Delete</button>
+          <button className="waves-effect waves-light btn blue cancel" onClick={handleCancel}>Cancel</button>
         </div>
       </div>
     )
